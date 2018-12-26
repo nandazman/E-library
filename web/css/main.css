@@ -21,9 +21,24 @@ section div select {
 section div form input {
   width: 200px;
   padding: 5px;
+  margin: 5px;
 }
 section #details h3 {
   width: 200px;
   background-color: blue;
   margin: 5px 0px;
+}
+section #details input {
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+}
+section #details #book-data {
+  padding: 0px;
+}
+section #details #histories {
+  padding: 0px;
+}
+section #details #histories ul {
+  list-style-type: none;
 }

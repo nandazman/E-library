@@ -6,7 +6,7 @@
     <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <script src="js/main.js"></script>
+
 </head>
 <body>
     <header>
@@ -18,48 +18,61 @@
         <div>
             <form>
                 <span>Judul Buku</span><br>
-                <input type="text" name="judulbuku"><br>
+                <input type="text" name="judulbuku" required id="title"><br>
                 <span>No Buku</span><br>
-                <input type="text" name="nobuku"><br>
+                <input type="text" name="nobuku" required id="number"><br>
                 <span>Tahun Terbit</span><br>
-                <input type="text" name="tahunterbit"><br>
+                <input type="text" name="tahunterbit" required id="year"><br>
                 <span>Pengarang</span><br>
-                <input type="text" name="pengarang">
+                <input type="text" name="pengarang" required id="author"><br>
+                <input type="submit" value="Submit" onclick="event.preventDefault();submitNewBook()">
             </form> 
         </div>
         <h2>New Borrowing Book</h2>
         <div>
             <form>
                 <span>Tanggal Peminjaman</span><br>
-                <input type="text" name="tanggalpeminjaman"><br>
+                <input type="date" name="tanggalpeminjaman" required id="borrowed"><br>
                 <span>Tanggal Pengembalian</span><br>
-                <input type="text" name="tanggalpengembalian"><br>
+                <input type="date" name="tanggalpengembalian" required id="returned"><br>
                 <span>Nama Peminjam</span><br>
-                <input type="text" name="namapeminjam"><br>
-                <span>Judul Buku</span><br>
-                <input type="text" name="judulbukudipinjam"><br>
-                <span>No Buku</span><br>
-                <input type="text" name="nobukudipinjam">
+                <input type="text" name="namapeminjam" required id="borrowed-name"><br>
+                <span>Judul & No Buku</span><br>
+                <select id="list-books" onchange="showBooksNumber()">
+                    <option disabled selected>--Book List--</option>
+                    
+                </select><br>
+                <select id="list-number">
+                    <option disabled selected>--Number of Book List--</option>
+                    
+                </select><br>
+                <input type="submit" value="Submit" onclick="event.preventDefault();submitBorrowedBookData()">
             </form> 
         </div>
         <h2>Book Details</h2>
         <div id="details">
-            <select onchange="">
+            <select onchange="showBooksNumberForHistory()" id="list-data-books">
                 <option disabled selected>--Book List--</option>
-                <option>book 1</option>
             </select><br>
-            <h3>Tanggal Peminjaman</h3>
-            <p>Tanggal</p>
-            <h3>Tanggal Pengembalian</h3>
-            <p>Tanggal</p>
-            <h3>Nama Peminjam</h3>
-            <p>Nama</p>
-            <h3>Judul Buku</h3>
-            <p>Judul</p>
-            <h3>No Buku</h3>
-            <p>Nomor</p>
+            <select id="list-data-number" >
+                <option disabled selected>--Number of Book List--</option>
+                
+            </select><br>
+            <input type="submit" value="Show" onclick="event.preventDefault();showBookData()"><br>
+            <div id="book-data">
+
+            </div>
+            <div id="histories">
+                
+            </div>
+            
         </div>
         
     </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        showBooklist()
+    </script>
 </body>
 </html>
