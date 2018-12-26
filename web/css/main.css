@@ -1,0 +1,29 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+header h1 {
+  margin: 10px;
+}
+section h2 {
+  padding: 0 15px;
+  margin: 10px 0px;
+  background-color: blue;
+}
+section div {
+  padding: 0 15px;
+}
+section div select {
+  width: 200px;
+  padding: 5px;
+  margin: 10px 0px;
+}
+section div form input {
+  width: 200px;
+  padding: 5px;
+}
+section #details h3 {
+  width: 200px;
+  background-color: blue;
+  margin: 5px 0px;
+}

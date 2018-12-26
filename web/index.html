@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My E-Library Comic</h1>
+    </header>
+    
+    <section>
+        <h2>New Books</h2>
+        <div>
+            <form>
+                <span>Judul Buku</span><br>
+                <input type="text" name="judulbuku"><br>
+                <span>No Buku</span><br>
+                <input type="text" name="nobuku"><br>
+                <span>Tahun Terbit</span><br>
+                <input type="text" name="tahunterbit"><br>
+                <span>Pengarang</span><br>
+                <input type="text" name="pengarang">
+            </form> 
+        </div>
+        <h2>New Borrowing Book</h2>
+        <div>
+            <form>
+                <span>Tanggal Peminjaman</span><br>
+                <input type="text" name="tanggalpeminjaman"><br>
+                <span>Tanggal Pengembalian</span><br>
+                <input type="text" name="tanggalpengembalian"><br>
+                <span>Nama Peminjam</span><br>
+                <input type="text" name="namapeminjam"><br>
+                <span>Judul Buku</span><br>
+                <input type="text" name="judulbukudipinjam"><br>
+                <span>No Buku</span><br>
+                <input type="text" name="nobukudipinjam">
+            </form> 
+        </div>
+        <h2>Book Details</h2>
+        <div id="details">
+            <select onchange="">
+                <option disabled selected>--Book List--</option>
+                <option>book 1</option>
+            </select><br>
+            <h3>Tanggal Peminjaman</h3>
+            <p>Tanggal</p>
+            <h3>Tanggal Pengembalian</h3>
+            <p>Tanggal</p>
+            <h3>Nama Peminjam</h3>
+            <p>Nama</p>
+            <h3>Judul Buku</h3>
+            <p>Judul</p>
+            <h3>No Buku</h3>
+            <p>Nomor</p>
+        </div>
+        
+    </section>
+</body>
+</html>
