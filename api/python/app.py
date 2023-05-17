@@ -7,7 +7,7 @@ import os
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Dewa626429@localhost:5432/E-library'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:{password}@localhost:5432/E-library'
 app.config['SECRET_KEY'] = os.urandom(24)
 
 CORS(app)
